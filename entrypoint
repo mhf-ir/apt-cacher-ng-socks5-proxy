@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sed -i "s/SOCKSSERVERFORREPLACE/$SOCKS5_SERVER/g" /etc/privoxy/config
+
+chown apt-cacher-ng:apt-cacher-ng /var/cache/apt-cacher-ng
+
+service privoxy start
+service apt-cacher-ng start
+
+tail -f /dev/null
