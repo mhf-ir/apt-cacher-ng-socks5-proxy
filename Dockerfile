@@ -7,6 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive ; \
   && apt upgrade -y \
   && apt update \
   && apt install apt-cacher-ng privoxy --no-install-recommends -y \
+  && echo 'PassThroughPattern: .*' >> /etc/apt-cacher-ng/acng.conf \
   && echo 'Proxy: http://127.0.0.1:8118' >> /etc/apt-cacher-ng/acng.conf \
   && apt-get clean && apt-get autoremove -y \
   && rm -r /var/lib/apt/lists/* && rm -rf /tmp && mkdir /tmp && chmod 777 /tmp && truncate -s 0 /var/log/*.log \
