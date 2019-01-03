@@ -2,7 +2,7 @@
 
 [![Docker Repository on Quay](https://quay.io/repository/sweb/apt-cacher-ng-socks5-proxy/status "Docker Repository on Quay")](https://quay.io/repository/sweb/apt-cacher-ng-socks5-proxy)
 
-This container is useful for development process for speedup and saving bandwidth.
+This container is useful for development process, speedup and saving bandwidth.
 
 ```bash
 docker run --restart=always --name apt-cacher-ng-proxy -h apt-cacher-ng-proxy \
