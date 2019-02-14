@@ -6,7 +6,7 @@ This container is useful for development process, speedup and saving bandwidth.
 
 ```bash
 docker run --restart=always --name apt-cacher-ng-proxy -h apt-cacher-ng-proxy \
-  -v /tmp/apt-ng-cache:/var/lib/apt-cacher-ng \
+  -v /tmp/apt-ng-cache:/var/cache/apt-cacher-ng \
   -p 3142:3142 \
   -e SOCKS5_SERVER=172.17.0.1:9050 \
   -d quay.io/sweb/apt-cacher-ng-socks5-proxy:master entrypoint
